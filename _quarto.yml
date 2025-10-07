@@ -1,0 +1,13 @@
+project:
+  output-dir: output
+
+number-sections: true
+
+format:
+  html: default
+  pdf:
+    documentclass: report
+    margin-left: 20mm
+    margin-top: 30mm
+    margin-right: 20mm
+    margin-bottom: 30mm
