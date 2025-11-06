@@ -23,11 +23,18 @@
 #' @examples
 #' ensure_packages(c("dplyr", "here"))
 ensure_packages <- function(packages) {
-  sapply(packages, function(package) {
-    if (!(package %in%  rownames(installed.packages()))) {
-      install.packages(package, repos = "http://cran.us.r-project.org")
-    }
-    library(package, character.only = TRUE, warn.conflicts = FALSE)
-    return(require(package, character.only = TRUE))
-  })
+    return(vapply(
+        packages,
+        function(package) {
+            if (!(package %in% rownames(installed.packages()))) {
+                install.packages(
+                    package,
+                    repos = "http://cran.us.r-project.org"
+                )
+            }
+            library(package, character.only = TRUE, warn.conflicts = FALSE)
+            return(require(package, character.only = TRUE))
+        },
+        logical(length(packages))
+    ))
 }
