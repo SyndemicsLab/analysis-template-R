@@ -7,6 +7,7 @@ linters: all_linters(
     object_name_linter = object_name_linter(styles = c("snake_case", "lowercase")),
     return_linter = return_linter(return_style = "explicit", allow_implicit_else = FALSE),
     cyclocomp_linter = cyclocomp_linter(complexity_limit = 10L),
+    pipe_consistency_linter = pipe_consistency_linter("auto"),
     unused_import_linter = unused_import_linter(interpret_glue = TRUE),
     undesirable_function_linter = undesirable_function_linter(
         fun = modify_defaults(
