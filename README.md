@@ -6,7 +6,7 @@ A template repository for R analysis projects.
 
 This template contains a basic analysis R project folder structure. It assumes we make use of [Quarto notebooks](https://quarto.org/) and the [renv](https://rstudio.github.io/renv/) virtual environment tool. We also make use of our custom linter and format restrictions based on our lab style guide rules.
 
-**Note:** While based on tidyverse, we do not subscribe to all the ideas and provide different checks. A major example of this is we utilize 4 space indentation rather than 2 space.
+**Note:** While based on tidyverse, we do not subscribe to all the ideas and provide different checks. Check the [lab style guide](https://github.com/SyndemicsLab/styleguide/blob/main/Rguide.md) for more information.
 
 ### Folders
 
