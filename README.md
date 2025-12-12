@@ -10,7 +10,7 @@ This template contains a basic analysis R project folder structure. It assumes w
 
 ### Folders
 
-- `data/` - General folder for all data. Ensure if it is too big that it does not get checked into VC itself but instead a reference to the data is copied.
+- `data/` - General folder for all data. Ensure if it is [too big](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#file-size-limits) that it does not get checked into version control itself but instead a reference to the data is copied.
 - `data/processed/` - Folder used to store data that is processed by the repository. This is not necessarily output data we want to report but intermediate data that we keep to save compute time.
 - `data/raw/` - Folder used to store data that has been untouched by the repository. It is a location for database routing, CSVs, etc. that are pulled from outside sources. Specifically, we do not store any data we have manipulated in this folder.
 - `notebooks/` - This folder contains all the Quarto notebooks and is where the analysis happens. Note, these are just `.qmd` files and not rendered results nor partially-rendered files.
