@@ -1,8 +1,0 @@
-root = true
-
-[*]
-end_of_line = lf
-indent_style = space
-
-[*.R]
-indent_size = 4
