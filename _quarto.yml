@@ -8,7 +8,15 @@ execute:
   freeze: auto
 
 format:
-  html: default
+  html:
+    toc: true
+    toc-location: left
+    theme:
+      light:
+        - ./custom.scss
+      dark:
+        - darkly
+        - ./custom.scss
   pdf:
     margin-left: 20mm
     margin-top: 30mm

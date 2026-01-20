@@ -1,0 +1,25 @@
+color:
+  palette:
+    cyan: "#3D9BE9"
+    pink: "#F0325F"
+    blue: "#003771"
+  background:
+    light: white
+    dark: black
+  foreground:
+    light: black
+    dark: "#ccc"
+  primary: blue
+
+typography:
+  fonts:
+    - family: "Red Hat Display"
+      source: google
+    - family: "Merriweather Sans"
+      source: google
+  base: "Red Hat Display"
+  headings:
+    family: "Merriweather Sans"
+    color:
+      light: blue
+      dark: cyan
