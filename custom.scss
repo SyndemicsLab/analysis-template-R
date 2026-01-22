@@ -137,7 +137,8 @@ pre code {
 pre:not(.sourceCode) {
     border: 1px #ccc solid;
     border-radius: 5px;
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible;
 
     &:before {
         position: relative;
