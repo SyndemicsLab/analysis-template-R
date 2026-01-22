@@ -15,8 +15,8 @@ format:
       light:
         - ./custom.scss
       dark:
-        - darkly
         - ./custom.scss
+        - ./custom-dark.scss
   pdf:
     margin-left: 20mm
     margin-top: 30mm

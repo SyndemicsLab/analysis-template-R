@@ -1,7 +1,6 @@
 # Keeping Knit html files out
 *.html
 
-
 # Keeping Data out of the Repo
 data/raw/*
 !data/raw/.gitkeep
@@ -63,3 +62,6 @@ rsconnect/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# ignore .editorconfig
+/.editorconfig
