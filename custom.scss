@@ -1,13 +1,10 @@
-/*-- scss:uses --*/
-
-/*-- scss:functions --*/
-
 /*-- scss:defaults --*/
 
 // fonts
-$font-family-sans-serif: "Helvetica", "Red Hat Display", sans-serif !default;
+$font-size-root: null !default;
+$font-size-base: 1rem !default;
+$font-family-sans-serif: system-ui, -apple-system, "Helvetica", "Red Hat Display", sans-serif !default;
 $font-family-monospace: "Courier New", "Consolas", monospace !default;
-
 $headings-font-weight: 500 !default;
 
 // colors
@@ -23,11 +20,10 @@ $primary: $syndemics-blue !default;
 $secondary: $syndemics-cyan !default;
 $light: $background-light !default;
 $dark: $background-dark !default;
+$link-color: $syndemics-pink !default;
 
 // options
 $enable-rounded: true !default;
-
-/*-- scss:mixins --*/
 
 /*-- scss:rules --*/
 
@@ -37,22 +33,32 @@ $enable-rounded: true !default;
 }
 
 body.quarto-light {
-    --bs-link-hover-color-rgb: #{colorToRGBA(#3d9be9)};
-    h1,.h1,h2,.h2 {
+    --bs-heading-color: var(--bs-heading-color-light);
+
+    h1, .h1, h2, .h2 {
         color: var(--bs-heading-color-light);
     }
 }
 
 body.quarto-dark {
-    --bs-link-color-rgb: #{colorToRGBA(#f0325f)};
-    --bs-link-hover-color-rgb: #{colorToRGBA(#3d9be9)};
-    h1,.h1,h2,.h2 {
+    --bs-heading-color: var(--bs-heading-color-dark);
+
+    h1, .h1, h2, .h2 {
         color: var(--bs-heading-color-dark);
     }
 }
 
-h1.title,.title.h1 {
+h1.title, .title.h1 {
     font-size: calc(1.5rem + 0.9vw);
+}
+
+// color toggle icon
+.quarto-color-scheme-toggle {
+    position: fixed;
+
+    .bi::before, .alternate .bi::before {
+        transition: background-image 0.5s;
+    }
 }
 
 #TOC {
@@ -69,10 +75,13 @@ h1.title,.title.h1 {
         }
     }
 
+    .nav-link {
+        transition: unset;
+    }
+
     .nav-link:not(:hover) {
         color: inherit !important;
         border-left: solid 1px var(--bs-body-color);
-        transition: color 0.5s;
     }
 
     .nav-link:hover {
@@ -85,15 +94,9 @@ h1.title,.title.h1 {
     font-weight: 600 !important;
 }
 
+// table style
 .table {
-    & > tbody {
-        border: 2px solid;
-    }
-
-    & col:not(:last-of-type) {
-        border-right: 2px solid;
-    }
-
+    // heading
     & tr:first-of-type {
         background-color: var(--bs-heading-color-dark);
         font-weight: 600;
@@ -104,8 +107,29 @@ h1.title,.title.h1 {
             color: black;
         }
     }
+
+    // table rules
+    & > tbody {
+        border: 2px solid;
+    }
+
+    & col:not(:last-of-type) {
+        border-right: 2px solid;
+    }
+
+    & > caption {
+        font-weight: 600;
+        color: var(--bs-heading-color);
+    }
 }
 
+figcaption {
+    font-weight: 600;
+    color: var(--bs-heading-color);
+    text-align: center;
+}
+
+// source code style
 pre code {
     font-weight: 600;
 }
