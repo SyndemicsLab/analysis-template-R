@@ -14,7 +14,7 @@ format:
     theme:
       light:
         - ./custom.scss
-        dark:
+      dark:
         - ./custom.scss
         - ./custom-dark.scss
   pdf:
