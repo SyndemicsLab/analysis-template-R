@@ -157,7 +157,15 @@ pre:not(.sourceCode) {
         background: var(--bs-body-bg);
         font-family: sans-serif;
         font-weight: 600;
+    }
+
+    .cell-output-stdout &:before {
         content: " Output ";
+    }
+
+    .cell-output-stderr &:before {
+        content: " Warning/Error ";
+        color: var(--quarto-scss-export-syndemics-pink);
     }
 
     & code {
