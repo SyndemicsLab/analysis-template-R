@@ -97,14 +97,24 @@ h1.title, .title.h1 {
 // table style
 .table {
     // heading
-    & tr:first-of-type {
+    &:not(:has(.header)) tr:first-of-type {
         background-color: var(--bs-heading-color-dark);
         font-weight: 600;
         border-bottom: 2px solid;
-        border-color: inherit;
+        border-color: var(--bs-body-color);
 
-        & td {
-            color: black;
+    }
+
+    &:has(.header) {
+        .header {
+            background-color: var(--bs-heading-color-dark);
+            font-weight: 600;
+            border: 2px solid;
+            border-color: var(--bs-body-color);
+        }
+
+        tr th:not(:last-child), tbody tr td:not(:last-child) {
+            border-right: 2px solid;
         }
     }
 
